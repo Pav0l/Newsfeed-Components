@@ -97,10 +97,6 @@
 .menu--open {
   transform: translateX(0);
 }
-.menu--close {
-  animation-name: slideInRight;
-  animation-duration: 0.5s;
-}
 .articles {
   margin-top: 95px;
 }
@@ -152,30 +148,6 @@
 .article-open {
   height: 400px;
 }
-/*
-@keyframes slideInDown {
-  from {
-    transform: translate3d(0, -20%, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-
-@keyframes slideInUp {
-  from {
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-*/
 html,
 body {
   margin: 0;
