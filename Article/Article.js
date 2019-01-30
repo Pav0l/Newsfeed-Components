@@ -38,8 +38,48 @@ to iterate over the articles NodeList and create a new instance of Article by pa
 in each article as a parameter to the constructor.
 */
 
+const headerField = document.querySelector('#title');
+const articleField = document.querySelector('#articleText');
+const articlesDiv = document.querySelector('.articles');
+
+
+const createArticle = () => {
+  const newDiv = document.createElement('div');
+  newDiv.className = 'article';
+  articlesDiv.appendChild(newDiv);
+  
+  const newTitle = document.createElement('h2');
+  newTitle.textContent = headerField.value;
+  newDiv.appendChild(newTitle);
+  
+  const newDate = document.createElement('p');
+  newDate.textContent = 'Jan 30th, 2019';
+  newDate.className = 'date';
+  newDiv.appendChild(newDate);
+  
+  const newArticle = document.createElement('p');
+  newArticle.textContent = articleField.value;
+  newDiv.appendChild(newArticle);
+  
+  const spanExpand = document.createElement('span');
+  spanExpand.className = 'expandButton';
+  spanExpand.textContent = 'expand';
+  newDiv.appendChild(spanExpand);
+  
+  const spanClose = document.createElement('span');
+  spanClose.className = 'closeButton';
+  spanClose.textContent = 'close';
+  newDiv.appendChild(spanClose);
+  
+  headerField.value = '';
+  articleField.value = '';
+}
+
+const theButton = document.querySelector('#submitBtn');
+theButton.addEventListener('click', createArticle);
+
+
 let articles = document.querySelectorAll('.article');
 articles.forEach(article => {
   return new Article(article);
 })
-console.log(articles)

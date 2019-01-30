@@ -16,6 +16,8 @@
   border-left: none;
   border-bottom: none;
   z-index: 2; /* This set the layer level of the element, it has precendence over initial level of 1*/
+  animation-name: slideInRight;
+  animation-duration: 0.5s;
 }
 
 .menu ul li{
@@ -24,8 +26,6 @@
   padding: 30px 0;
   text-align: center;
 }
-
-
 
 @keyframes slideInLeft {
   from {
@@ -38,8 +38,26 @@
   }
 }
 
+@keyframes slideInRight {
+  from {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+    display: block;
+  }
+
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
 .menu--open {
   display: block;
   animation-name: slideInLeft;
+  animation-duration: 0.5s;
+}
+
+.menu--close {
+  // display: none;
+  animation-name: slideInRight;
   animation-duration: 0.5s;
 }

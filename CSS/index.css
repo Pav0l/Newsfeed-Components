@@ -35,6 +35,39 @@
   margin: 0;
   font-size: 48px;
 }
+.articleForm {
+  margin: 5%;
+}
+.articleForm form {
+  display: flex;
+  flex-direction: column;
+}
+.articleForm form input[type=text],
+.articleForm form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0.5rem 0 1.5rem;
+  resize: vertical;
+}
+.articleForm form input[type=text] {
+  width: 30%;
+}
+.articleForm form #submitBtn {
+  padding: 1%;
+  width: 15%;
+  background-color: #a0011e;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.articleForm form #submitBtn:hover {
+  background-color: white;
+  border: 1px solid #a0011e;
+  color: #a0011e;
+}
 .menu-button {
   position: absolute;
   left: 20px;
@@ -54,6 +87,8 @@
   border-bottom: none;
   z-index: 2;
   /* This set the layer level of the element, it has precendence over initial level of 1*/
+  animation-name: slideInRight;
+  animation-duration: 0.5s;
 }
 .menu ul li {
   list-style-type: none;
@@ -70,9 +105,23 @@
     transform: translate3d(0, 0, 0);
   }
 }
+@keyframes slideInRight {
+  from {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+    display: block;
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
 .menu--open {
   display: block;
   animation-name: slideInLeft;
+  animation-duration: 0.5s;
+}
+.menu--close {
+  animation-name: slideInRight;
   animation-duration: 0.5s;
 }
 .articles {
@@ -126,6 +175,30 @@
 .article-open {
   height: 400px;
 }
+/*
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -20%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+*/
 html,
 body {
   margin: 0;
