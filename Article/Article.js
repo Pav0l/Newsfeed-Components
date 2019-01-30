@@ -88,6 +88,3 @@ to iterate over the articles NodeList and create a new instance of Article by pa
 in each article as a parameter to the constructor.
 */
 articles.forEach(article => {return new Article(article);})
-
-
-console.log(articles)
