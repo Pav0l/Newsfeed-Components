@@ -36,7 +36,7 @@
   font-size: 48px;
 }
 .articleForm {
-  margin: 5%;
+  margin: 5% 10%;
 }
 .articleForm form {
   display: flex;
@@ -44,7 +44,6 @@
 }
 .articleForm form input[type=text],
 .articleForm form textarea {
-  width: 100%;
   padding: 1.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;

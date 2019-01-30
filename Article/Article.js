@@ -73,6 +73,8 @@ const createArticle = () => {
   
   headerField.value = '';
   articleField.value = '';
+
+  return new Article(newDiv);
 }
 
 const theButton = document.querySelector('#submitBtn');
@@ -81,5 +83,6 @@ theButton.addEventListener('click', createArticle);
 
 let articles = document.querySelectorAll('.article');
 articles.forEach(article => {
+  console.log(article)
   return new Article(article);
 })
