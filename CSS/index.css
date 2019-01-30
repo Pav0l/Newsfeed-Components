@@ -22,7 +22,7 @@
 .header {
   width: 100%;
   height: 75px;
-  background-color: #388E3C;
+  background-color: #a0011e;
   color: white;
   display: flex;
   justify-content: center;
@@ -95,9 +95,19 @@
 .article .expandButton {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 45%;
   font-size: 12px;
   color: grey;
+  cursor: pointer;
+  transform: translate(-50%);
+  background-color: white;
+}
+.article .closeButton {
+  position: absolute;
+  bottom: 0;
+  right: 45%;
+  font-size: 12px;
+  color: #a0011e;
   cursor: pointer;
   transform: translate(-50%);
   background-color: white;
