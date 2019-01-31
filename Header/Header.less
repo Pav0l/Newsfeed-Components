@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   height: 75px;
-  background-color: #388E3C;
+  background-color: rgb(160, 1, 30);
   color: white;
   display: flex;
   justify-content: center;
@@ -13,5 +13,40 @@
   h1 {
     margin: 0;
     font-size: 48px;
+  }
+}
+
+.articleForm {
+  margin: 5% 10%;
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input[type=text], textarea {
+      padding: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin: 0.5rem 0 1.5rem;
+      resize: vertical;
+    }
+  
+    input[type=text] {
+      width: 30%;
+    }
+    
+    #submitBtn {
+      padding: 1%;
+      width: 15%;
+      background-color: rgb(160, 1, 30);
+      border: 1px solid white;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        border: 1px solid rgb(160, 1, 30);
+        color: rgb(160, 1, 30);
+      }
+    }
   }
 }

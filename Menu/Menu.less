@@ -5,7 +5,10 @@
 }
 
 .menu {
-  display: none;
+  // display: none;
+  transform: translateX(-100%);
+  // transition for transform property, duration, timing function
+  transition: transform 1s ease;
   position: fixed;
   top: 75px;
   left: 0;
@@ -26,5 +29,7 @@
 }
 
 .menu--open {
-  display: block;
+  // display: block;
+  transform: translateX(0);
+
 }
